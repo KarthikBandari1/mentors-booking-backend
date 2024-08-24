@@ -26,8 +26,8 @@ router.post("/login", (req, res) => {
           } else if (result) {
             const token = jwt.sign(
               { userId: user.id },
-              process.env.JWT_SECRET || "karthik_secret_key", // Use environment variable for the secret key
-              { expiresIn: "1h" } // Set token expiration time
+              process.env.JWT_SECRET || "karthik_secret_key",
+              { expiresIn: "1h" }
             );
             res.json({ token });
           } else {

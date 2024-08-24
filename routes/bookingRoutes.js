@@ -2,11 +2,9 @@ const express = require("express");
 const router = express.Router();
 const sqlite3 = require("sqlite3").verbose();
 
-// Assuming you have a global `db` variable from your `app.js` file
 let db = new sqlite3.Database("careercarve.db");
 
 // POST a new booking
-// Assuming you are using Express.js and SQLite
 router.post("/", (req, res) => {
   const {
     student_id,

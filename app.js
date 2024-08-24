@@ -48,9 +48,9 @@ const authenticate = (req, res, next) => {
 };
 
 // Routes
-app.use("/api/mentors", authenticate, mentorRoutes); // Protect mentor routes with authentication
-app.use("/api/students", studentRoutes); // Optionally protect student routes with authentication
-app.use("/api/bookings", authenticate, bookingRoutes); // Protect booking routes with authentication
+app.use("/api/mentors", authenticate, mentorRoutes);
+app.use("/api/students", studentRoutes);
+app.use("/api/bookings", authenticate, bookingRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
